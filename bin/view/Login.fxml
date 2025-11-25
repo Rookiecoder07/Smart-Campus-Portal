@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.LoginController"
+           style="-fx-background-color: linear-gradient(to bottom, #4A90E2, #003C8F);"
+           stylesheets="@style.css"
+           alignment="CENTER">
+
+    <!-- Card Container -->
+    <VBox alignment="CENTER" spacing="15" prefWidth="350" prefHeight="300"
+          style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+
+        <VBox.margin>
+            <Insets top="40"/>
+        </VBox.margin>
+
+        <!-- Shadow -->
+        <effect>
+            <DropShadow radius="10" color="#00000040"/>
+        </effect>
+
+        <Label text="Smart Campus Portal"
+               style="-fx-font-size: 20px; -fx-text-fill: #003C8F; -fx-font-weight: bold;"/>
+
+        <TextField fx:id="emailField" promptText="Enter Email"
+                   style="-fx-background-radius: 10; -fx-padding: 10;"/>
+
+        <PasswordField fx:id="passwordField" promptText="Enter Password"
+                       style="-fx-background-radius: 10; -fx-padding: 10;"/>
+
+        <Button text="Login" onAction="#handleLogin"
+                style="-fx-background-color: #003C8F; -fx-text-fill: white; -fx-font-size: 14px;
+                       -fx-background-radius: 10; -fx-padding: 10 20;"/>
+
+        <Label fx:id="errorLabel" textFill="RED"
+               style="-fx-font-size: 12px;"/>
+
+        <Label text="© 2025 Smart Campus"
+               style="-fx-font-size: 10px; -fx-text-fill: gray;"/>
+
+    </VBox>
+
+</StackPane>
