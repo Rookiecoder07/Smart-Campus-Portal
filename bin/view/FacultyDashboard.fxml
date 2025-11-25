@@ -57,6 +57,25 @@
                 <Label text="Announcements"
                        style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #003C8F;" />
 
+                <!-- Students List Card -->
+                <VBox prefWidth="600" spacing="10"
+                      style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 20;">
+
+                    <Label text="Students List"
+                           style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #003C8F;" />
+
+                    <TableView fx:id="studentTable" prefHeight="300">
+                        <columns>
+                            <TableColumn fx:id="colId" text="ID" prefWidth="80" />
+                            <TableColumn fx:id="colName" text="Name" prefWidth="200" />
+                            <TableColumn fx:id="colCourse" text="Course" prefWidth="200" />
+                            <TableColumn fx:id="colSemester" text="Semester" prefWidth="120" />
+                        </columns>
+                    </TableView>
+
+                </VBox>
+
+
                 <TableView fx:id="announcementTable" prefHeight="250">
                     <columns>
                         <TableColumn text="Content" prefWidth="250" />
