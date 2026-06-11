@@ -35,6 +35,51 @@ This project is designed as a mini campus management system for academic purpose
 
 ---
 
+Exception Handling
+--
+
+The Smart Campus Portal implements robust and structured exception handling to ensure application stability, better user experience, and fault tolerance.
+
+Key Exception Handling Mechanisms
+
+Custom Exceptions
+A dedicated exception package is used to define custom exceptions such as:
+
+InvalidLoginException for handling invalid credentials and empty inputs
+
+DatabaseException for handling database-related failures
+This improves clarity and separation of error logic.
+
+Input Validation (JavaFX Controllers)
+User inputs like email and password are validated before processing.
+Invalid or empty inputs are handled using custom exceptions and displayed as user-friendly error messages on the UI.
+
+DAO-Level Exception Handling (JDBC)
+All database operations are wrapped in try-catch blocks.
+SQL errors are caught and rethrown as custom DatabaseException to avoid exposing low-level database details.
+
+Role & Authorization Validation
+During login, user roles (Student, Admin, Faculty) are validated.
+Unauthorized or unknown roles trigger controlled exceptions.
+
+Graceful UI Error Feedback
+Errors are displayed using labels or alerts instead of crashing the application, ensuring smooth user interaction.
+
+Benefits
+--
+
+Prevents application crashes
+
+Improves debugging and maintainability
+
+Ensures secure and reliable authentication
+
+Demonstrates proper use of OOP and Exception Handling concepts
+
+This structured approach fulfills the Exception Handling requirement of the Java GUI-based project rubric.
+
+---
+
 ## Technologies Used
 - **Java 23**  
 - **JavaFX 25** for UI  
